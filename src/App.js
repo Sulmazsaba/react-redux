@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import person from "./Person/Person";
 import Person from "./Person/Person";
-import styled from 'styled-component';
 class App extends Component {
   state = {
     persons: [
@@ -89,7 +88,10 @@ class App extends Component {
       <div className="App">
         <h1>Hi, I am a React Developer</h1>
         <p className={classes}>testing red bold style...</p>
-        <button onClick={() => this.switchNameHandler("Soheila")}>
+        <button
+          class="button"
+          onClick={() => this.switchNameHandler("Soheila")}
+        >
           Switch Name
         </button>
         <button style={style} onClick={() => this.togglePersonsHandler()}>

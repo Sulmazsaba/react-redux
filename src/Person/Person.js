@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-component";
 
-const styledDiv = styled.div`
-backgroundColor:red,
+// const styledDiv = styled.div`
+//   backgroundcolor: red;
+// `;
 
-`;
+// const styledButton = styled.button``;
 const person = (props) => {
   return (
     <div>
