@@ -1,5 +1,5 @@
 import React from "react";
-
+import classes from "./Person.css";
 // const styledDiv = styled.div`
 //   backgroundcolor: red;
 // `;
@@ -7,7 +7,7 @@ import React from "react";
 // const styledButton = styled.button``;
 const person = (props) => {
   return (
-    <div>
+    <div className={classes.person}>
       <p onClick={props.click}>
         hello, I'm {props.name} and I'm {props.age} years old
       </p>

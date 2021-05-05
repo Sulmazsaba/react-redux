@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import classes from "./App.css";
 import person from "./Person/Person";
 import Person from "./Person/Person";
 class App extends Component {
@@ -58,6 +58,7 @@ class App extends Component {
     };
 
     let persons = null;
+    const assignedClasses = [];
 
     if (this.state.showPersons) {
       persons = (
@@ -80,16 +81,17 @@ class App extends Component {
         backgroundColor: "blue",
         color: "white",
       };
+    assignedClasses.push(classes.red);
+    assignedClasses.push(classes.bold);
     }
 
-    let classes = ["red", "bold"].join(" ");
 
     return (
-      <div className="App">
+      <div className={classes.App}>
         <h1>Hi, I am a React Developer</h1>
-        <p className={classes}>testing red bold style...</p>
+        <p className={assignedClasses}>testing red bold style...</p>
         <button
-          class="button"
+          className={classes.button}
           onClick={() => this.switchNameHandler("Soheila")}
         >
           Switch Name
